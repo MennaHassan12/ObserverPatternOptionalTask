@@ -1,0 +1,481 @@
+{
+  "diagramType": 2,
+  "data": {
+    "nodes": [
+      {
+        "id": "f9c11676-c05d-4873-9edb-ab4856d25b91",
+        "type": "Table",
+        "position": {
+          "x": 828.3922779132874,
+          "y": 183.99561464026087
+        },
+        "data": {
+          "label": "SONG",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "42999a54-9dbe-4848-8065-f4a7fb1ca05f",
+              "name": "titel",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "f40dd2a7-4aea-431a-8298-400e83ae43d6",
+              "name": "auther",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "d0ad4478-5284-4694-be05-e52488949e86",
+              "name": "fk_ALBUM",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "6f506107-f925-4511-a49e-ff0f38680e7e",
+                "sourceTableId": "24801d88-0936-4987-9081-d4f06493fee1",
+                "columns": [
+                  {
+                    "id": "fk_1c027772-ae12-4002-9ff8-449c6c9351c7",
+                    "name": "album_id",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 100
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "002384c3-d675-427e-8ca8-cfb3290c2b78",
+        "type": "Table",
+        "position": {
+          "x": 511.627723714226,
+          "y": 414.853138618385
+        },
+        "data": {
+          "label": "MUSICIAN",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "8c4ab608-82de-47d6-913c-a5b0a13e3218",
+              "name": "musician_id",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "d881373f-1bb9-4413-9381-7fe683b73462",
+              "name": "name",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "ab368b61-156f-44e7-9ae8-a4658ff39fe8",
+              "name": "street",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "6c34cd92-782f-4d6d-8d8d-1b20db84e98b",
+              "name": "city",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "eb38bf9a-1767-4596-8f04-b2f1688ba3d6",
+              "name": "phone",
+              "type": "INT",
+              "isPrimaryKey": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 149
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "24801d88-0936-4987-9081-d4f06493fee1",
+        "type": "Table",
+        "position": {
+          "x": 826.6476457552424,
+          "y": 341
+        },
+        "data": {
+          "label": "ALBUM",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "1c027772-ae12-4002-9ff8-449c6c9351c7",
+              "name": "album_id",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "568c0a0a-1323-49e3-8b6c-8317a1c87162",
+              "name": "date",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "3905f7fe-bebb-42af-9153-cde577c9ca0f",
+              "name": "title",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "3fddb2e7-50df-4ead-95c1-c9584d38896a",
+              "name": "fk_MUSICIAN",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "c997f0c2-854c-402d-a8bb-c80de22a636c",
+                "sourceTableId": "002384c3-d675-427e-8ca8-cfb3290c2b78",
+                "columns": [
+                  {
+                    "id": "fk_8c4ab608-82de-47d6-913c-a5b0a13e3218",
+                    "name": "musician_id",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": true
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 125
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "c6888ab8-686b-482a-bb7e-87f8ef63ee5c",
+        "type": "Table",
+        "position": {
+          "x": 209.63451620485716,
+          "y": 252.15402260824467
+        },
+        "data": {
+          "label": "INSTRUMENT",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "3662f147-dfb1-47ee-8c66-60dc0826de20",
+              "name": "name",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "509bb254-cce2-4e15-a84a-66db46999bd8",
+              "name": "key",
+              "type": "INT",
+              "isPrimaryKey": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 75
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "3aab438a-8f11-4ae6-a200-ca9813ecdbb0",
+        "type": "Table",
+        "position": {
+          "x": 512.5050118941995,
+          "y": 183.78171979363827
+        },
+        "data": {
+          "label": "Musician_Song",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "13008592-dad3-46e9-acf6-284d01367bb0",
+              "name": "fk_SONG",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "6c57db03-1cbf-490e-9ff0-8aa675be2da4",
+                "sourceTableId": "f9c11676-c05d-4873-9edb-ab4856d25b91",
+                "columns": [
+                  {
+                    "id": "fk_42999a54-9dbe-4848-8065-f4a7fb1ca05f",
+                    "name": "titel",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "58aa91e8-615b-4c62-9dde-4a02d18994ee",
+              "name": "fk_MUSICIAN",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "16e21148-3dd7-49e2-b652-1f79e0423e3e",
+                "sourceTableId": "002384c3-d675-427e-8ca8-cfb3290c2b78",
+                "columns": [
+                  {
+                    "id": "fk_8c4ab608-82de-47d6-913c-a5b0a13e3218",
+                    "name": "musician_id",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 76
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "7ac650c7-9010-4a00-9784-0b3e96316c24",
+        "type": "Table",
+        "position": {
+          "x": 207.7217029805098,
+          "y": 455.33239241049324
+        },
+        "data": {
+          "label": "Musician_Instrument",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "ae59802a-be24-47bf-9a65-8e079784b37d",
+              "name": "fk_INSTRUMENT",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "edd24c2c-8c56-47e3-b021-fcc172f31b9b",
+                "sourceTableId": "c6888ab8-686b-482a-bb7e-87f8ef63ee5c",
+                "columns": [
+                  {
+                    "id": "fk_3662f147-dfb1-47ee-8c66-60dc0826de20",
+                    "name": "name",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "5e801bfb-c380-4f2e-8288-610325acaddc",
+              "name": "fk_MUSICIAN",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "8df5c006-d685-41d1-94ea-d72550d26d80",
+                "sourceTableId": "002384c3-d675-427e-8ca8-cfb3290c2b78",
+                "columns": [
+                  {
+                    "id": "fk_8c4ab608-82de-47d6-913c-a5b0a13e3218",
+                    "name": "musician_id",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 76
+        },
+        "selected": false,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "24801d88-0936-4987-9081-d4f06493fee1->f9c11676-c05d-4873-9edb-ab4856d25b91_6f506107-f925-4511-a49e-ff0f38680e7e",
+        "type": "Relational",
+        "source": "24801d88-0936-4987-9081-d4f06493fee1",
+        "targetHandle": "foreign-key-handle-6f506107-f925-4511-a49e-ff0f38680e7e",
+        "target": "f9c11676-c05d-4873-9edb-ab4856d25b91",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "6f506107-f925-4511-a49e-ff0f38680e7e",
+            "sourceTableId": "24801d88-0936-4987-9081-d4f06493fee1",
+            "columns": [
+              {
+                "id": "fk_1c027772-ae12-4002-9ff8-449c6c9351c7",
+                "name": "album_id",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "002384c3-d675-427e-8ca8-cfb3290c2b78->24801d88-0936-4987-9081-d4f06493fee1_c997f0c2-854c-402d-a8bb-c80de22a636c",
+        "type": "Relational",
+        "source": "002384c3-d675-427e-8ca8-cfb3290c2b78",
+        "targetHandle": "foreign-key-handle-c997f0c2-854c-402d-a8bb-c80de22a636c",
+        "target": "24801d88-0936-4987-9081-d4f06493fee1",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "c997f0c2-854c-402d-a8bb-c80de22a636c",
+            "sourceTableId": "002384c3-d675-427e-8ca8-cfb3290c2b78",
+            "columns": [
+              {
+                "id": "fk_8c4ab608-82de-47d6-913c-a5b0a13e3218",
+                "name": "musician_id",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "f9c11676-c05d-4873-9edb-ab4856d25b91->3aab438a-8f11-4ae6-a200-ca9813ecdbb0_6c57db03-1cbf-490e-9ff0-8aa675be2da4",
+        "type": "Relational",
+        "source": "f9c11676-c05d-4873-9edb-ab4856d25b91",
+        "targetHandle": "foreign-key-handle-6c57db03-1cbf-490e-9ff0-8aa675be2da4",
+        "target": "3aab438a-8f11-4ae6-a200-ca9813ecdbb0",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "6c57db03-1cbf-490e-9ff0-8aa675be2da4",
+            "sourceTableId": "f9c11676-c05d-4873-9edb-ab4856d25b91",
+            "columns": [
+              {
+                "id": "fk_42999a54-9dbe-4848-8065-f4a7fb1ca05f",
+                "name": "titel",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "002384c3-d675-427e-8ca8-cfb3290c2b78->3aab438a-8f11-4ae6-a200-ca9813ecdbb0_16e21148-3dd7-49e2-b652-1f79e0423e3e",
+        "type": "Relational",
+        "source": "002384c3-d675-427e-8ca8-cfb3290c2b78",
+        "targetHandle": "foreign-key-handle-16e21148-3dd7-49e2-b652-1f79e0423e3e",
+        "target": "3aab438a-8f11-4ae6-a200-ca9813ecdbb0",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "16e21148-3dd7-49e2-b652-1f79e0423e3e",
+            "sourceTableId": "002384c3-d675-427e-8ca8-cfb3290c2b78",
+            "columns": [
+              {
+                "id": "fk_8c4ab608-82de-47d6-913c-a5b0a13e3218",
+                "name": "musician_id",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c6888ab8-686b-482a-bb7e-87f8ef63ee5c->7ac650c7-9010-4a00-9784-0b3e96316c24_edd24c2c-8c56-47e3-b021-fcc172f31b9b",
+        "type": "Relational",
+        "source": "c6888ab8-686b-482a-bb7e-87f8ef63ee5c",
+        "targetHandle": "foreign-key-handle-edd24c2c-8c56-47e3-b021-fcc172f31b9b",
+        "target": "7ac650c7-9010-4a00-9784-0b3e96316c24",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "edd24c2c-8c56-47e3-b021-fcc172f31b9b",
+            "sourceTableId": "c6888ab8-686b-482a-bb7e-87f8ef63ee5c",
+            "columns": [
+              {
+                "id": "fk_3662f147-dfb1-47ee-8c66-60dc0826de20",
+                "name": "name",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "002384c3-d675-427e-8ca8-cfb3290c2b78->7ac650c7-9010-4a00-9784-0b3e96316c24_8df5c006-d685-41d1-94ea-d72550d26d80",
+        "type": "Relational",
+        "source": "002384c3-d675-427e-8ca8-cfb3290c2b78",
+        "targetHandle": "foreign-key-handle-8df5c006-d685-41d1-94ea-d72550d26d80",
+        "target": "7ac650c7-9010-4a00-9784-0b3e96316c24",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "8df5c006-d685-41d1-94ea-d72550d26d80",
+            "sourceTableId": "002384c3-d675-427e-8ca8-cfb3290c2b78",
+            "columns": [
+              {
+                "id": "fk_8c4ab608-82de-47d6-913c-a5b0a13e3218",
+                "name": "musician_id",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "viewport": {
+      "x": -32.05699044689868,
+      "y": -115.31742920601164,
+      "zoom": 1
+    }
+  },
+  "name": "mapping(1)Relational Schema",
+  "folder": {
+    "name": "Diagrams",
+    "folderType": 1,
+    "depth": 0,
+    "id": 232818
+  },
+  "id": 311991,
+  "updatedAtTimestamp": 1772315639
+}
